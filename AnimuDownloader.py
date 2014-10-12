@@ -34,12 +34,12 @@ import time
 # Eg, what do you enter in the search terms
 
 listOfAnimes = []*6
-listOfAnimes[0] = "[FFF] Non Non Biyori"
-listOfAnimes[1] = ""
-listOfAnimes[2] = ""
-listOfAnimes[3] = ""
-listOfAnimes[4] = ""
-listOfAnimes[5] = ""
+listOfAnimes[0] = "hatsuyuki unlimited blade 10bit"
+listOfAnimes[1] = "chihiro grisaia no"
+listOfAnimes[2] = "ore twintail ni narimasu commie"
+listOfAnimes[3] = "inou battle wa nichijou commie"
+listOfAnimes[4] = "trinity seven damedesuyo"
+listOfAnimes[5] = "vivid amagi brilliant park"
 listOfAnimes[6] = ""
 
 
@@ -48,11 +48,11 @@ baseDirectory = "D:\\Anime Torrents\\"
 
 #Folder names in said root directory
 folderNames = []*6
-folderNames[0] = "Non Non Biyori"
-folderNames[1] = "Kamisama no Inai"
-folderNames[2] = "Fate Kaleid"
-folderNames[3] = "Stella Jogakuin"
-folderNames[4] = "Love Lab"
+folderNames[0] = "Fate Stay Night - Ufotable"
+folderNames[1] = "Grisaia no Kajitsu"
+folderNames[2] = "Ore, Twintail ni Narimasu"
+folderNames[3] = "Inou Battle wa Nichijou-kei no Naka de"
+folderNames[4] = "Trinity Seven"
 folderNames[5] = ""
 folderNames[6] = ""
 
@@ -119,7 +119,6 @@ class NyaaParser(HTMLParser):
 			#print "--attr:", attr
 			if tag == 'a' and re.match("\('href',", str(attr)) != None:
 				attribute = str(attr)
-				#print "link for anime desu --------------", attribute[11:-2]
 				dataArray[0] = attribute[11:-2]
 				dataArray[0] = string.replace(dataArray[0],"view","download")
 	def handle_data(self, data):
